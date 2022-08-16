@@ -25,23 +25,59 @@ $('.subphotos').slick({
 });
 
 $('.equipment-card#bath').on('click', function (event) {
-    $('#bath-description').slideToggle();
-    $('#ceiling-description').slideUp();
-    $('#wall-description').slideUp();
-    $('#floor-description').slideUp();
+    $('#interior-decoration').hide();
+    $('#bath-description').fadeIn();
+    $('html, body').animate({
+        scrollTop: $('.interior-decoration').offset().top
+    }, 300);
 });
 $('.equipment-card#ceiling').on('click', function (event) {
-    $('#ceiling-description').slideToggle();
-    $('#wall-description').slideUp();
-    $('#floor-description').slideUp();
+    $('#ceiling-description').fadeIn();
+    $('#bath-description').hide();
+    $('html, body').animate({
+        scrollTop: $('.interior-decoration').offset().top
+    }, 300);
 });
 $('.equipment-card#wall').on('click', function (event) {
-    $('#ceiling-description').slideUp();
-    $('#wall-description').slideToggle();
-    $('#floor-description').slideUp();
+    $('#wall-description').fadeIn();
+    $('#bath-description').hide();
+    $('html, body').animate({
+        scrollTop: $('.interior-decoration').offset().top
+    }, 300);
 });
 $('.equipment-card#floor').on('click', function (event) {
-    $('#ceiling-description').slideUp();
-    $('#wall-description').slideUp();
-    $('#floor-description').slideToggle();
+    $('#floor-description').fadeIn();
+    $('#bath-description').hide();
+    $('html, body').animate({
+        scrollTop: $('.interior-decoration').offset().top
+    }, 300);
+});
+
+$('#close-bath-description').on('click', function (event) {
+    $('#interior-decoration').fadeIn();
+    $('#bath-description').hide();
+    $('html, body').animate({
+        scrollTop: $('.interior-decoration').offset().top
+    }, 300);
+});
+$('#close-ceiling-description').on('click', function (event) {
+    $('#bath-description').fadeIn();
+    $('#ceiling-description').hide();
+    $('html, body').animate({
+        scrollTop: $('.interior-decoration').offset().top
+    }, 300);
+});
+$('#close-wall-description').on('click', function (event) {
+    $('#bath-description').fadeIn();
+    $('#wall-description').hide();
+    $('html, body').animate({
+        scrollTop: $('.interior-decoration').offset().top
+    }, 300);
+});
+$('#close-floor-description').on('click', function (event) {
+    $('#bath-description').fadeIn();
+    $('#floor-description').hide();
+    $('html, body').animate({
+        scrollTop: $('.interior-decoration').offset().top
+    }, 300);
 });

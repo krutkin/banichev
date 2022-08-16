@@ -79,7 +79,7 @@
 .photos {
     &__slide {
         width: 100%;
-        height: 710px;
+        height: 540px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -88,7 +88,7 @@
 }
 .subphotos {
     &__slide {
-        height: 210px;
+        height: 150px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -132,7 +132,7 @@
     
     &-row {
         border-bottom: 1px solid $grey;
-        padding: 30px;
+        padding: 20px;
         &:first-child {
             border-top: 1px solid $grey;
         }
