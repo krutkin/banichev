@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $ptsans;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+    transition: all ease 0.3s;
+    &:hover {
+        cursor: pointer;
+    }
+}
