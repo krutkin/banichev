@@ -41,13 +41,13 @@ lightbox.option({
 $('.equipment-card').on('click', function (event) {
   var cardID = $(this).attr('id');
   setTimeout(function () {
-    $('.equipment-photos').slick('refresh');
+    $("#".concat(cardID, "-description")).find('.equipment-photos').slick('refresh');
   }, 300);
   $(this).closest('.equipment-block').hide();
   $("#".concat(cardID, "-description")).fadeIn();
-  $('html, body').animate({
-    scrollTop: $(this).closest('.equipment-row').offset().top
-  }, 300);
+  this.closest('.equipment-row').scrollIntoView({
+    behavior: 'smooth'
+  }, true);
 });
 $('#close-frame-description').on('click', function (event) {
   $('#base').fadeIn();
