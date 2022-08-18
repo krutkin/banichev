@@ -10,8 +10,7 @@ $('.main-photos').slick({
   asNavFor: '.main-subphotos',
   infinite: true,
   prevArrow: '<button type="button" class="slick-prev"><span class="icon icon-prevArrow"></span></button>',
-  nextArrow: '<button type="button" class="slick-next"><span class="icon icon-nextArrow"></span></button>',
-  lazyLoad: 'proggressive'
+  nextArrow: '<button type="button" class="slick-next"><span class="icon icon-nextArrow"></span></button>'
 });
 $('.main-subphotos').slick({
   slidesToShow: 3,
@@ -21,8 +20,7 @@ $('.main-subphotos').slick({
   dots: false,
   centerMode: true,
   focusOnSelect: true,
-  infinite: true,
-  lazyLoad: 'proggressive'
+  infinite: true
 });
 $('.equipment-photos').slick({
   slidesToShow: 1,
@@ -31,8 +29,7 @@ $('.equipment-photos').slick({
   dots: true,
   infinite: true,
   prevArrow: '<button type="button" class="slick-prev"><span class="icon icon-prevArrow"></span></button>',
-  nextArrow: '<button type="button" class="slick-next"><span class="icon icon-nextArrow"></span></button>',
-  lazyLoad: 'proggressive'
+  nextArrow: '<button type="button" class="slick-next"><span class="icon icon-nextArrow"></span></button>'
 });
 lightbox.option({
   'disableScrolling': true,
@@ -42,7 +39,7 @@ $('.equipment-card').on('click', function (event) {
   var cardID = $(this).attr('id');
   setTimeout(function () {
     $("#".concat(cardID, "-description")).find('.equipment-photos').slick('refresh');
-  }, 300);
+  }, 500);
   $(this).closest('.equipment-block').hide();
   $("#".concat(cardID, "-description")).fadeIn();
   this.closest('.equipment-row').scrollIntoView({
@@ -88,23 +85,14 @@ $('#close-decor-elements-description').on('click', function (event) {
 $('#close-luster-description').on('click', function (event) {
   $('#decor-elements-description').fadeIn();
   $('#luster-description').hide();
-  setTimeout(function () {
-    $('.equipment-photos').slick('refresh');
-  }, 300);
 });
 $('#close-window-description').on('click', function (event) {
   $('#decor-elements-description').fadeIn();
   $('#window-description').hide();
-  setTimeout(function () {
-    $('.equipment-photos').slick('refresh');
-  }, 300);
 });
 $('#close-carpet-description').on('click', function (event) {
   $('#decor-elements-description').fadeIn();
   $('#carpet-description').hide();
-  setTimeout(function () {
-    $('.equipment-photos').slick('refresh');
-  }, 300);
 });
 $('#close-bath-description').on('click', function (event) {
   $('#interior-decoration').fadeIn();
@@ -117,16 +105,10 @@ $('#close-restroom-description').on('click', function (event) {
 $('#close-ceiling-description').on('click', function (event) {
   $('#bath-description').fadeIn();
   $('#ceiling-description').hide();
-  setTimeout(function () {
-    $('.equipment-photos').slick('refresh');
-  }, 300);
 });
 $('#close-wall-description').on('click', function (event) {
   $('#bath-description').fadeIn();
   $('#wall-description').hide();
-  setTimeout(function () {
-    $('.equipment-photos').slick('refresh');
-  }, 300);
 });
 $('#close-plinth-description').on('click', function (event) {
   $('#wall-description').fadeIn();
@@ -147,9 +129,6 @@ $('#close-architraves-description').on('click', function (event) {
 $('#close-floor-description').on('click', function (event) {
   $('#bath-description').fadeIn();
   $('#floor-description').hide();
-  setTimeout(function () {
-    $('.equipment-photos').slick('refresh');
-  }, 300);
 });
 $('#close-furnace-description').on('click', function (event) {
   $('#mainThing').fadeIn();
@@ -170,16 +149,10 @@ $('#close-furniture-description').on('click', function (event) {
 $('#close-table-description').on('click', function (event) {
   $('#furniture-description').fadeIn();
   $('#table-description').hide();
-  setTimeout(function () {
-    $('.equipment-photos').slick('refresh');
-  }, 300);
 });
 $('#close-bench-description').on('click', function (event) {
   $('#furniture-description').fadeIn();
   $('#bench-description').hide();
-  setTimeout(function () {
-    $('.equipment-photos').slick('refresh');
-  }, 300);
 });
 $('#close-textile-description').on('click', function (event) {
   $('#decoration').fadeIn();
